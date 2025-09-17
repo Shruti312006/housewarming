@@ -4,20 +4,25 @@
         <title>Invitation for house warming!</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
-            html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      width: 100%;
-    }
+        html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
 
-    body {
-      background-image: url('Devotional Green Background.gif');
-      background-size: auto 100vh;
+html {
+  background-image: url('Devotional Green Background.gif');
+  background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  background-attachment: scroll;
-    }
+  background-attachment: fixed; /* Keeps background fixed while scrolling */
+}
+
+body {
+  min-height: 100vh; /* Makes sure body grows to fit content */
+  background: transparent; /* No background on body itself */
+}
             h1{
                 padding-top: 100px;
                 text-align: center;
@@ -117,6 +122,7 @@
 </script>
     </body>
 </html>
+
 
 
 
