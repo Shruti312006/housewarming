@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Invitation for house warming!</title>
+        <style>
+            body{background-image:url("Devotional Green Background.gif");
+            background-size:cover;
+            
+            }
+            h1{
+                padding-top: 100px;
+                text-align: center;
+                color:rgb(0, 0, 0);
+                font-family: "Papyrus", fantasy;
+                font-weight: bolder;
+            }
+            .image {
+                  display: flex;
+                  justify-content: center;
+                }
+            .info h2{
+                font-family: 'Great Vibes', cursive;
+                text-align: center;
+            }
+            b{
+                color: maroon;
+                text-shadow: 2px 2px 4px rgb(87, 48, 48);
+            }
+            .info h3{
+                text-align: center;
+            }
+            .time{
+            text-align: center;    
+            }
+            .address{
+                text-align: center;
+            }
+            .response-buttons {
+                display: flex;
+                justify-content: center;
+                gap: 20px; 
+                margin-top: 10px;
+                }
+
+            .response-buttons button {
+                padding: 10px 20px;
+                font-size: 16px;
+                border: 2px solid maroon;
+                border-radius: 8px;
+                background-color: #fff5f5;
+                color: maroon;
+                font-family: "Georgia", serif;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+                }
+
+            .response-buttons button:hover {
+                background-color: maroon;
+                color: white;
+                transform: scale(1.05);
+                }
+            #yes, #no {
+            text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>VASTU SHANTI & HOUSE WARMING!</h1>
+        </div>
+        <div class="image">
+            <img src="bappa.png" height="100px" width="100px">
+        </div>
+        <div class="info">
+            <h2>
+                <b>Shweta</b> & <b>Chaitanya</b> 
+            </h2>
+            <h3>cordially invite you and your family to grace the occasion of our New home's warming ceremony!</h3>
+        </div>
+        <div class="time">
+            <h2>On <b>2nd October 2025</b></h2>
+            <h2>At <b>12PM</b></h2>
+        </div>
+       <div class="address">
+  <h2>👇Are you coming?👇</h2>
+  <div class="response-buttons">
+    <button class="yes-btn" onclick="msg1()">Yes!</button>
+    <button class="no-btn" onclick="msg2()">No!</button>
+  </div>
+</div>
+<div id="yes" style="margin-top: 20px; font-size: 18px;"></div>
+<div id="no" style="margin-top: 20px; font-size: 18px;"></div>
+<script>
+    function msg1(){
+        document.getElementById("yes").innerHTML = `<h3 style="font-family: 'Great Vibes', cursive; text-decoration: underline">
+            Cool! Here's the address:<br>D-903, Dosti Oak, Dosti west County, Balkum, Thane-400608<br><br>
+            <a href="https://www.google.com/maps/place/Dosti+Oak/@19.2274958,72.9173366,13z/data=!4m10!1m2!2m1!1sdosti+oak+d+wing!3m6!1s0x3be7bfa2eba605e5:0xd4b375147f568f59!8m2!3d19.2274958!4d72.9935543!15sChBkb3N0aSBvYWsgZCB3aW5nWhIiEGRvc3RpIG9hayBkIHdpbmeSARJhcGFydG1lbnRfYnVpbGRpbmeaASNDaFpEU1VoTk1HOW5TMFZKUTBGblNVTm9OV1pRUlZsM0VBRaoBVAoNL2cvMTFoX2Z3OGJoehABKgoiBmQgd2luZygAMh8QASIbF4kPqDgQ0NRTFf4NCHKNTe73TzTpUZjxlpd1MhQQAiIQZG9zdGkgb2FrIGQgd2luZ-ABAPoBBAhUEDs!16s%2Fg%2F11h_fw8bhz?authuser=1&entry=ttu&g_ep=EgoyMDI1MDkxMC4wIKXMDSoASAFQAw%3D%3D"  target="_blank">View on google!</a>
+            </h3>`;
+        document.getElementById("no").innerHTML = "";
+    }
+    function msg2(){
+        document.getElementById("no").innerHTML = `<h3 style="font-family: 'Great Vibes', cursive;">😔 Sorry to miss you! We'll share pictures!</h3>`;
+        document.getElementById("yes").innerHTML = "";
+    }
+</script>
+    </body>
+</html>
