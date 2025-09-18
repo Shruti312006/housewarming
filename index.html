@@ -108,6 +108,19 @@ body {
 <div id="yes" style="margin-top: 20px; font-size: 18px;"></div>
 <div id="no" style="margin-top: 20px; font-size: 18px;"></div>
 <script>
+    function submitResponse(response) {
+        // Send response to PHP
+        fetch('submit_response.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: 'response=' + encodeURIComponent(response)
+        }).then(res => res.text())
+          .then(data => {
+              console.log("Response saved:", data);
+          }).catch(err => {
+              console.error("Failed to save response:", err);
+          });
+    }
     function msg1(){
         document.getElementById("yes").innerHTML = `<h3 style="font-family: 'Great Vibes'; text-decoration: underline">
             Cool! Here's the address:<br>D-903, Dosti Oak, Dosti west County, Balkum, Thane-400608<br><br>
@@ -115,14 +128,17 @@ body {
             <br><br>
             </h3>`;
         document.getElementById("no").innerHTML = "";
+        submitResponse("Yes");
     }
     function msg2(){
         document.getElementById("no").innerHTML = `<h3 style="font-family: 'Great Vibes';">😔 Sorry to miss you! We'll share pictures!</h3>`;
         document.getElementById("yes").innerHTML = "";
+        submitResponse("No");
     }
 </script>
     </body>
 </html>
+
 
 
 
