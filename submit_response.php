@@ -1,9 +1,9 @@
 <?php
-// Update these with your actual DB details
+
 $host = "localhost";
-$username = "your_mysql_username";
-$password = "your_mysql_password";
-$dbname = "your_database_name";
+$username = "root";
+$password = "password";
+$dbname = "mydb";
 
 // Connect to DB
 $conn = new mysqli($host, $username, $password, $dbname);
